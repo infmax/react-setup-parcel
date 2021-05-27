@@ -5,11 +5,15 @@
         "strict": true,
         "noImplicitReturns": true,
         "noImplicitAny": true,
-        "module": "es6",
+        "module": "esnext",
         "moduleResolution": "node",
         "target": "es5",
         "allowJs": true,
         "jsx": "react",
+        "lib": [
+          "es2015",
+          "dom"
+        ]
     },
     "include": [
         "./src/**/*"

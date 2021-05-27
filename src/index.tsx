@@ -1,4 +1,3 @@
-import './assets/styles.css'
 import './assets/styles.less'
 
 import * as React from 'react'
