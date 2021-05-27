@@ -4,6 +4,7 @@ import { Layout } from 'antd'
 import * as React from 'react'
 import { BrowserRouter as Router, Switch } from 'react-router-dom'
 
+import AuthChecker from './Components/Auth/AuthChecker'
 import MenuBlock from './Components/Menu'
 import RouteWithSubRoutes from './Components/Router/RouteWithSubRoutes'
 import routes from './Routes'
@@ -18,21 +19,23 @@ const App = () => (
     <Layout>
       <React.Suspense fallback={<></>}>
         <StoresProvider value={stores}>
-          <Router>
-            <Sider>
-              <MenuBlock />
-            </Sider>
+          <AuthChecker>
+            <Router>
+              <Sider>
+                <MenuBlock />
+              </Sider>
 
-            <Layout>
-              <Content className='site-layout-background'>
-                <Switch>
-                  {routes.map(route => (
-                    <RouteWithSubRoutes {...route} />
-                  ))}
-                </Switch>
-              </Content>
-            </Layout>
-          </Router>
+              <Layout>
+                <Content className='site-layout-background'>
+                  <Switch>
+                    {routes.map(route => (
+                      <RouteWithSubRoutes {...route} />
+                    ))}
+                  </Switch>
+                </Content>
+              </Layout>
+            </Router>
+          </AuthChecker>
         </StoresProvider>
       </React.Suspense>
     </Layout>

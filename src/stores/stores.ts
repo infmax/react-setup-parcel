@@ -1,9 +1,11 @@
 import * as React from 'react'
 
+import AuthStore from './AuthStore'
 import RegistryStore from './RegistryStore'
 
 export const stores = Object.freeze({
-  registryStore: new RegistryStore()
+  registryStore: new RegistryStore(),
+  authStore: new AuthStore()
 })
 
 const storesContext = React.createContext(stores)
