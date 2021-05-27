@@ -1,32 +1,32 @@
 # react-setup-parcel
 
-Empty project.
+1. React
+2. Mobx
+3. Parcel
+4. Eslint
+5. Ant design
 
 ## Building and running on localhost
 
 First install dependencies:
 
 ```sh
-npm install
+yarn install
 ```
 
 To run in hot module reloading mode:
 
 ```sh
-npm start
+yarn start
 ```
 
 To create a production build:
 
 ```sh
-npm run build-prod
+yarn run build-prod
 ```
 
 ## Running
 
 Open the file `dist/index.html` in your browser
-
-## Credits
-
-Made with [createapp.dev](https://createapp.dev/)
 
