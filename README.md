@@ -23,7 +23,7 @@ yarn start
 To create a production build:
 
 ```sh
-yarn run build-prod
+yarn build-prod
 ```
 
 ## Running
